@@ -43,15 +43,13 @@ const Search = React.createClass({
   },
 
   render () {
-    const {className, onChange, caseSensitive, throttle, filterKeys, value, ...inputProps} = this.props
+    const {onChange, caseSensitive, throttle, filterKeys, value, ...inputProps} = this.props
     inputProps.type = inputProps.type || 'search'
     inputProps.value = this.state.searchTerm
     inputProps.onChange = this.updateSearch
     inputProps.placeholder = inputProps.placeholder || 'Search'
     return (
-      <div className={className}>
-        <input {...inputProps} />
-      </div>
+      <input {...inputProps} />
     )
   },
 
